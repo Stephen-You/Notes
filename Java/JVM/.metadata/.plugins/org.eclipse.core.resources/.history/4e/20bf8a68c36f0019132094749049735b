@@ -1,0 +1,10 @@
+package cn.youric.exception;
+
+public class JavaMethodAreaOOM {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package cn.yourick.classloader;
+
+public class ClassLoaderTest {
+
+}

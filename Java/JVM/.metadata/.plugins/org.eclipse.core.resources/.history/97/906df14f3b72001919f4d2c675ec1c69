@@ -1,0 +1,26 @@
+package cn.yourick.memoryAllocationAndCollectionPolicies;
+
+/**
+ * @author YorickYou
+ * 2019年5月9日
+ * GitHUb：https://github.com/YorickYou/Notes/tree/master/Java/JVM
+ */
+public class EdenTest {
+	
+	private static final int _1MB = 1024 * 1024;
+	
+	/*-Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails 
+	-XX:SurvivorRatio=8
+	-XX:+UseSerialGC*/
+	public static void testAllocation(){
+		byte[] allocation1, allocation2, allocation3, allocation4;
+		allocation1 = new byte[2 * _1MB];
+		allocation2 = new byte[2 * _1MB];
+		allocation3 = new byte[2 * _1MB];
+		allocation4 = new byte[4 * _1MB];	//在这里出现一次Minor GC
+	}
+	
+	public static void main(String[] args) {
+		testAllocation();
+	}
+}

@@ -1,0 +1,20 @@
+package cn.youric.methodArea;
+
+public class OOMTest {   
+
+	public static void main(String[] args) {
+        URL url = null;
+        List classLoaderList = new ArrayList();
+        try {
+            url = new File("/tmp").toURI().toURL();
+            URL[] urls = {url};
+            while (true){
+                ClassLoader loader = new URLClassLoader(urls);
+                classLoaderList.add(loader);
+                loader.loadClass("cn.metaspace.error.ClassA");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}  

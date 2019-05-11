@@ -1,0 +1,5 @@
+package cn.yourick.memoryAllocationAndCollectionPolicies;
+
+public class EdenTest {
+
+}

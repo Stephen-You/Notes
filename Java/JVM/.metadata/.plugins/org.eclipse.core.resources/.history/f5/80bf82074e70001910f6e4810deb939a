@@ -1,0 +1,10 @@
+package cn.yourick.referenceCounting;
+/**
+ * 引用计数算法很难解决对象间相互引用的问题
+ * @author YorickYou
+ * 2019年5月7日
+ * GitHUb：https://github.com/YorickYou/Notes/tree/master/Java/JVM
+ */
+public class ReferenceCountingGC {
+	
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/garbageCollection/src/cn/yourick/memoryAllocationAndCollectionPolicies/EdenTest.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="cn.yourick.memoryAllocationAndCollectionPolicies.EdenTest"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="garbageCollection"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails &#13;&#10;-XX:SurvivorRatio=8&#13;&#10;-XX:MaxTenuringThreshold=1&#13;&#10;-XX:+UseSerialGC&#13;&#10;-XX:+PrintTenuringDistribution&#13;&#10;-XX:-HandlePromotionFailure"/>
+</launchConfiguration>

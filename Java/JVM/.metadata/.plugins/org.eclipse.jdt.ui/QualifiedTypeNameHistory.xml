@@ -1,2 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="cn.yourick.classloading.opportunity.SunClass"/>
+<fullyQualifiedTypeName name="cn.yourick.classloading.opportunity.SuperClass"/>
+<fullyQualifiedTypeName name="cn.yourick.classloading.opportunity.ConstClass"/>
+<fullyQualifiedTypeName name="cn.yourick.classloading.process.FieldResolation.Interface0"/>
+<fullyQualifiedTypeName name="cn.yourick.classloading.process.FieldResolation.Parent"/>
+<fullyQualifiedTypeName name="cn.yourick.classloading.process.FieldResolation.Sub"/>
+<fullyQualifiedTypeName name="cn.yourick.classloading.process.Test.Sub"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="cn.yourick.classloading.process.Test.DeadLoopClass"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+<fullyQualifiedTypeName name="java.lang.SecurityManager"/>
+<fullyQualifiedTypeName name="java.lang.ClassLoader"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="net.sf.cglib.proxy.Enhancer"/>
+<fullyQualifiedTypeName name="net.sf.cglib.proxy.MethodInterceptor"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Method"/>
+<fullyQualifiedTypeName name="net.sf.cglib.proxy.MethodProxy"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+<fullyQualifiedTypeName name="sun.misc.Unsafe"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="cn.yourick.referenceCounting.ReferenceCountingGC"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,55 @@
+package cn.yourick.memoryAllocationAndCollectionPolicies;
+
+/**
+ * @author YorickYou
+ * 2019年5月9日
+ * GitHUb：https://github.com/YorickYou/Notes/tree/master/Java/JVM
+ */
+public class EdenTest {
+	
+	private static final int _1MB = 1024 * 1024;
+	
+	/*-Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails 
+	-XX:SurvivorRatio=8
+	-XX:+UseSerialGC*/
+	public static void testAllocation(){
+		byte[] allocation1, allocation2, allocation3, allocation4;
+		allocation1 = new byte[2 * _1MB];
+		allocation2 = new byte[2 * _1MB];
+		allocation3 = new byte[2 * _1MB];
+		allocation4 = new byte[4 * _1MB];	//在这里出现一次Minor GC
+	}
+	/**
+	 * -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails 
+-XX:SurvivorRatio=8
+-XX:PretenureSizeThreshold=3145728
+-XX:+UseSerialGC
+	 */
+	public static  void testPretenureSizeThreshold(){
+		byte[] allocation;
+		allocation = new byte[4 * _1MB];//直接分配在老年代中
+	}
+	/**
+	 * -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails 
+-XX:SurvivorRatio=8
+-XX:MaxTenuringThreshold=1
+-XX:+UseSerialGC
+-XX:TargetSurvivorRatio
+  设定survivor区的目标使用率。默认50，即survivor区对象目标使用率为50%。
+	 */
+	public static void testTenuringThreshold(){
+		byte[] allocation1, allocation2, allocation3;
+		allocation1 = new byte[_1MB / 4];
+		//什么时候进入老年代取决于XX：MaxTenuringThreshold设置
+		allocation2 = new byte[4 * _1MB];
+		allocation3 = new byte[4 * _1MB];
+		allocation3 = null;
+		allocation3 = new byte[4 * _1MB];
+	}
+	
+	public static void main(String[] args) {
+//		testAllocation();
+//		testPretenureSizeThreshold();
+		testTenuringThreshold();
+	}
+}
